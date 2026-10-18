@@ -1,96 +1,49 @@
-<!DOCTYPE html>
-<html lang="ro">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Benchea | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Benchea Larisa-Diana — software engineering student and developer portfolio.">
+  <title>Benchea Larisa-Diana | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
-  <div class="page-title">WEB PORTOFOLIO</div>
-
-  <header class="hero">
-    <div class="hero-content">
-      <img src="assets/profile.jpg" class="avatar" alt="Profile">
-
-      <div>
-        <h1>Benchea Larisa-Diana</h1>
-        <p class="role">Software Engineering Student (Year II)</p>
-        <p class="desc">
-          Software Engineering student at the Faculty of Engineering (Sibiu), focused on building solid fundamentals in software engineering.
-        </p>
-
-        <div class="tags">
-          <span>C/C++</span>
-          <span>Java</span>
-          <span>JavaScript</span>
-          <span>HTML</span>
-          <span>CSS</span>
-        </div>
-        
-      </div>
-    </div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Benchea Larisa-Diana home"><span>BL</span><strong>benchea.</strong></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a class="active" href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a class="nav-cta" href="contact.html">Let's talk <span aria-hidden="true">↗</span></a>
+    </nav>
   </header>
 
+  <main>
+    <section class="hero container">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Software engineering student</p>
+        <h1>Building digital<br><em>ideas into reality.</em></h1>
+        <p class="hero-intro">I’m Larisa, a curious developer from Sibiu who enjoys turning complex problems into simple, thoughtful experiences.</p>
+        <div class="button-row"><a class="button button-primary" href="projects.html">Explore my work <span aria-hidden="true">↗</span></a><a class="text-link" href="about.html">More about me <span aria-hidden="true">→</span></a></div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="portrait-wrap"><img src="assets/profile.jpg" alt="Portrait of Benchea Larisa-Diana"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span></div>
+        <div class="floating-note note-top"><span class="note-icon">✦</span><div><strong>Currently learning</strong><small>Systems &amp; algorithms</small></div></div>
+        <div class="floating-note note-bottom"><strong>Available for</strong><small>Collaborations · 2026</small></div>
+      </div>
+    </section>
 
-  <div class="container">
-    <div class="left">
+    <section class="marquee-band" aria-label="Skills">
+      <div class="marquee-track"><span>JavaScript</span><b>✦</b><span>C / C++</span><b>✦</b><span>Java</span><b>✦</b><span>UI thinking</span><b>✦</b><span>Problem solving</span><b>✦</b><span>JavaScript</span><b>✦</b><span>C / C++</span><b>✦</b><span>Java</span></div>
+    </section>
 
-      <section class="section">
-        <h2>Education</h2>
-        <div class="card info-card">
-          <p>
-            <strong>Faculty of Engineering, Sibiu</strong><br>
-            Computer Engineering — Year II
-          </p>
-          <p>
-            <strong>Workshops & extracurricular</strong><br>
-            Arduino Workshop & “Eat Sleep Code Repeat” (NXP) — hands-on embedded development using NXP microcontrollers/boards to develop, configure, and test hardware–software applications.
-          </p>
-          <p>
-            Key subjects: Object-Oriented Programming, Data Structures, Algorithms, Computer Architecture.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>Experience</h2>
-        <div class="card info-card">
-          <p>
-            <strong>Customer Support Specialist</strong><br>
-            • Resolved complex customer situations through clear, effective communication.<br>
-            • Used English daily with international clients and stakeholders.<br>
-          </p>
-        </div>
-      </section>
-
-    </div>
-
-    
-    <div class="right">
-
-      <section class="section">
-        <h2>GitHub Projects</h2>
-
-        <input type="text" id="searchInput" placeholder="Search by name or language...">
-
-        <div id="projects" class="grid"></div>
-        <button id="loadMoreBtn" class="load-more hidden" type="button">Load more</button>
-        <button id="showLessBtn" class="load-more hidden" type="button">Show less</button>
-      </section>
-
-      <div id="loading" class="spinner"></div>
-      <div id="error" class="hidden">Ups! Nu am putut încărca proiectele momentan.</div>
-
-    </div>
-
-  </div>
-
-  <script src="script.js"></script>
+    <section class="intro-section container reveal">
+      <div><p class="eyebrow">A little introduction</p><h2>Curious by nature.<br><em>Intentional by design.</em></h2></div>
+      <div class="intro-text"><p>As a second-year Computer Engineering student, I’m building a strong foundation in software development, from data structures to object-oriented design.</p><a class="text-link" href="about.html">Discover my story <span aria-hidden="true">→</span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© <span data-year></span> Benchea Larisa-Diana</span><span>Made with curiosity <span class="accent">✦</span></span></div></footer>
+  <script src="js/script.js"></script>
 </body>
 </html>

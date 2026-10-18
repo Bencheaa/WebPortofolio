@@ -1,110 +1,55 @@
-# Portfolio Website (GitHub Projects + Local Projects)
+# Benchea Portfolio
 
-A lightweight portfolio website that displays your GitHub repositories (via the GitHub API) plus a few hardcoded/local projects from `projects.json`, with search and a **Load More / Show less** mechanism to keep the page uncluttered.
+A responsive, accessible portfolio website for Benchea Larisa-Diana. The site is built with semantic HTML, vanilla CSS, and vanilla JavaScript — no build step or framework is required.
 
-## Access
+## Live site
 
-### Live site
-
-- https://bencheaa.github.io/ProiectWEB/
-
-### Local (on your machine)
-
-- Recommended: VS Code **Live Server** (see “Run Locally”) — it will open the site in your browser.
-- Alternative: open `index.html` directly (e.g. `file:///.../index.html`).
+https://bencheaa.github.io/ProiectWEB/
 
 ## Features
 
-- **Hero profile section** with avatar, role, tags
-- **Education & Experience** shown as readable cards
-- **GitHub Projects grid**
-  - Fetches repositories from the GitHub API
-  - Filters out forks
-  - Sorts by last update date
-  - **Search** by name or language
-  - **Load more / Show less** when there are more than 6 projects
-- **Local projects**
-  - Reads `projects.json` and merges entries with GitHub projects
-  - Local projects can include `stargazers_count` to show ⭐ like GitHub cards
-- **Offline-friendly fallback**
-  - If GitHub is unavailable (offline / rate limit), the site still shows local projects
+- Responsive fixed navigation with a mobile hamburger menu
+- Hero section with calls to action and responsive typography
+- About page with education and experience timeline
+- Projects page populated exclusively from the public GitHub API
+- Project filtering by language
+- Accessible contact form with client-side validation and success/error states
+- Scroll-triggered reveal animations and hover transitions
+- Reduced layout and readable content at mobile breakpoints
 
-## Tech Stack
+## Project structure
 
-- **HTML5**
-- **CSS3** (custom properties / CSS variables)
-- **JavaScript (Vanilla)**
-- **GitHub REST API** (`https://api.github.com/users/<username>/repos`)
-
-## Project Structure
-
-- `index.html` — layout + sections
-- `style.css` — styling (palette, layout, cards, buttons)
-- `script.js` — GitHub fetch, merge with local projects, search, pagination (Load more / Show less)
-- `projects.json` — 3 hardcoded/local projects
-- `assets/` — images (background + profile avatar)
-
-## Run Locally
-
-This project is a static site. You can open it directly, but using a local server is recommended.
-
-### Option A — VS Code Live Server (recommended)
-
-1. Install the **Live Server** extension in VS Code.
-2. Right-click `index.html` → **Open with Live Server**.
-
-
-### Option B — Direct file open
-
-You can also open `index.html` directly in the browser:
-
-- `file:///.../index.html`
-
-Note: some browsers have stricter rules around local `fetch()`; if anything doesn’t load, use Option A.
-
-## Configuration
-
-### GitHub username
-
-In `script.js`:
-
-- Set `const username = "Bencheaa";` to your GitHub username.
-
-### Local projects (`projects.json`)
-
-Each entry supports:
-
-```json
-{
-  "name": "Project name",
-  "description": "Short description",
-  "language": "JavaScript",
-  "url": "https://...",
-  "updated_at": "2026-05-21T12:00:00.000Z",
-  "stargazers_count": 10
-}
+```text
+project-root/
+├── index.html
+├── about.html
+├── projects.html
+├── contact.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+└── assets/
+    ├── background.png
+    └── profile.jpg
 ```
 
-Only the fields you need are required, but `name` is strongly recommended.
+The projects page requests the latest public, non-fork repositories for the `Bencheaa` GitHub account. There is no local project data file or fallback list; the page displays a clear error state if GitHub is unavailable.
 
-## Pagination / Load More Requirement
+## Run locally
 
-To prevent clutter when there are many projects:
+Use VS Code Live Server or any static HTTP server from the project root:
 
-- If total projects **> 6**, the page renders **5** projects initially.
-- Clicking **Load more** shows 5 more.
-- Clicking **Show less** collapses back to the first 5.
+```bash
+python -m http.server 8000
+```
 
-## Known Limitations / Notes
+Then open http://localhost:8000.
 
-- **GitHub API rate limit**: unauthenticated requests can be limited. If you hit the limit, the UI shows a message and falls back to local projects.
-- **Network/offline**: if you’re offline, the UI shows a message and displays local projects.
-- The avatar image path is `assets/profile.jpg`.
-- The background image path is `assets/background.png`.
+Opening the pages directly with `file://` works for the static pages, but a local server is recommended so browser security rules do not interfere with API requests.
 
 ## Customization
 
-- Replace the background image: put your file in `assets/` and update the path in `style.css` if needed.
-- Replace the profile picture: save a photo as `assets/profile.jpg` (square crops look best).
-
-
+- Update the GitHub username in `js/script.js` if the portfolio owner changes.
+- Replace `assets/profile.jpg` with a square profile image.
+- Adjust design tokens at the top of `css/style.css` to change colors and spacing.
