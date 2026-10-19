@@ -84,9 +84,10 @@ em { color: var(--rose-deep); font-style: normal; }
 .timeline { border-left: 2px solid var(--rose-deep); margin-top: 25px; }
 .timeline-item { display: grid; gap: 28px; grid-template-columns: 150px 1fr; padding: 22px 0 22px 28px; }
 .timeline-item + .timeline-item { border-top: 1px solid var(--rose); }
+.timeline-item h2 { font-size: clamp(1.7rem, 4vw, 2.6rem); }
 .timeline-date { color: var(--rose-deep); padding-top: 4px; }
 .timeline-place { color: var(--rose-deep); font-size: .88rem; margin: 5px 0; }
-.timeline-item p:last-child { font-size: .92rem; }
+.timeline-item p:last-child { font-size: .88rem; }
 .skills-layout { display: grid; gap: 70px; grid-template-columns: 1fr 1fr; }
 .chip-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 25px; }
 .skills-side { border-left: 2px solid var(--rose); padding-left: 25px; }
