@@ -3,47 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Benchea Larisa-Diana — software engineering student and developer portfolio.">
-  <title>Benchea Larisa-Diana | Portfolio</title>
+  <meta name="description" content="Larisa-Diana Benchea, Computer Engineering student and web developer from Sibiu, Romania.">
+  <meta property="og:title" content="Larisa-Diana Benchea | Computer Engineering Student">
+  <meta property="og:description" content="Computer Engineering student and web developer from Sibiu, Romania.">
+  <meta property="og:type" content="website">
+  <title>Larisa-Diana Benchea | Home</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Benchea Larisa-Diana home"><span>BL</span><strong>benchea.</strong></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
+    <a class="logo" href="index.html" aria-label="Larisa Benchea home">LB.</a>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a class="active" href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a class="nav-cta" href="contact.html">Let's talk <span aria-hidden="true">↗</span></a>
+      <a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a>
     </nav>
   </header>
-
-  <main>
-    <section class="hero container">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span class="eyebrow-dot"></span> Software engineering student</p>
-        <h1>Building digital<br><em>ideas into reality.</em></h1>
-        <p class="hero-intro">I’m Larisa, a curious developer from Sibiu who enjoys turning complex problems into simple, thoughtful experiences.</p>
-        <div class="button-row"><a class="button button-primary" href="projects.html">Explore my work <span aria-hidden="true">↗</span></a><a class="text-link" href="about.html">More about me <span aria-hidden="true">→</span></a></div>
-      </div>
-      <div class="hero-visual reveal">
-        <div class="portrait-wrap"><img src="assets/profile.jpg" alt="Portrait of Benchea Larisa-Diana"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span></div>
-        <div class="floating-note note-top"><span class="note-icon">✦</span><div><strong>Currently learning</strong><small>Systems &amp; algorithms</small></div></div>
-        <div class="floating-note note-bottom"><strong>Available for</strong><small>Collaborations · 2026</small></div>
+  <main id="main-content">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <p class="code-label">&lt;hello world /&gt;</p>
+          <div class="hero-name"><h1>Larisa-Diana<br><span>Benchea</span></h1><img class="hero-profile" src="assets/profile.jpg" alt="Larisa-Diana Benchea" width="1365" height="1065"></div>
+          <p class="hero-role">Computer Engineering Student <span>|</span> Web Developer</p>
+          <p class="hero-text">Curious, detail-oriented and committed to continuous learning, I turn every experience into a chance to grow.</p>
+          <div class="hero-actions"><a class="button button-primary" href="projects.html">View my projects</a><a class="button button-outline" href="contact.html">Contact me</a></div>
+        </div>
       </div>
     </section>
-
-    <section class="marquee-band" aria-label="Skills">
-      <div class="marquee-track"><span>JavaScript</span><b>✦</b><span>C / C++</span><b>✦</b><span>Java</span><b>✦</b><span>UI thinking</span><b>✦</b><span>Problem solving</span><b>✦</b><span>JavaScript</span><b>✦</b><span>C / C++</span><b>✦</b><span>Java</span></div>
-    </section>
-
     <section class="intro-section container reveal">
-      <div><p class="eyebrow">A little introduction</p><h2>Curious by nature.<br><em>Intentional by design.</em></h2></div>
-      <div class="intro-text"><p>As a second-year Computer Engineering student, I’m building a strong foundation in software development, from data structures to object-oriented design.</p><a class="text-link" href="about.html">Discover my story <span aria-hidden="true">→</span></a></div>
+      <p class="section-kicker">// a little about me</p>
+      <div><h2>Learning by<br><em>building.</em></h2><p>Based in Sibiu, Romania. Currently studying Computer Engineering and exploring software, embedded systems and thoughtful interfaces.</p><a class="arrow-link" href="about.html">Read more <span>→</span></a></div>
     </section>
+    <section class="featured-section container">
+      <div class="section-heading"><p class="section-kicker">// selected work</p><a class="arrow-link" href="projects.html">See all projects <span>→</span></a></div>
+      <div class="project-grid featured-grid">
+        <article class="project-card reveal"><p class="project-category">01 / Embedded</p><h3>RobotX Competition</h3><p>Designed and programmed an autonomous “Line Follower” robot for a university competition.</p><div class="tags"><span>Arduino</span><span>C/C++</span><span>Robotics</span></div></article>
+        <article class="project-card reveal"><p class="project-category">02 / Web</p><h3>GreenHabits</h3><p>Contributed frontend work to a gamified web app for sustainable behaviours.</p><div class="tags"><span>JavaScript</span><span>React</span><span>Frontend</span></div></article>
+        <article class="project-card reveal"><p class="project-category">03 / Software</p><h3>Mill Game</h3><p>Built game logic, state management, move validation and an interactive interface.</p><div class="tags"><span>C#</span><span>OOP</span><span>UI</span></div></article>
+      </div>
+    </section>
+    <section class="home-cta"><div class="container"><p class="section-kicker">// keep in touch</p><h2>Have a question<br>or an idea?</h2><a class="button button-light" href="contact.html">Let’s talk <span>→</span></a></div></section>
   </main>
-  <footer class="site-footer"><div class="container footer-inner"><span>© <span data-year></span> Benchea Larisa-Diana</span><span>Made with curiosity <span class="accent">✦</span></span></div></footer>
-  <script src="js/script.js"></script>
+  <footer class="site-footer"><div class="container"><span>© <span data-year> 2026 </span> Larisa-Diana Benchea </span></div></footer>
 </body>
 </html>
